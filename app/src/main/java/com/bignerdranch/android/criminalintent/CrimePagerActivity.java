@@ -53,5 +53,13 @@ public class CrimePagerActivity extends FragmentActivity {
             }
         });
 
+        // TODO(eso): is there a refactor so we aren't doing a linear search?
+        for (int i = 0; i < mCrimes.size(); i++) {
+            if (mCrimes.get(i).getId().equals(crimeId)) {
+                mViewPager.setCurrentItem(i);
+                break;
+            }
+        }
+
     }
 }
